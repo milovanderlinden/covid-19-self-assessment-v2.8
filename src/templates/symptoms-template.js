@@ -6,7 +6,8 @@ import Question from "../components/question"
 import ContinueButton from "../components/continue-button"
 import { GlobalStateContext } from "../context/global-context-provider"
 import Checkbox from "../components/checkbox"
-import { shared, symptomsTitle, symptoms, logic } from "../shared"
+import { general } from "../localized_content"
+import { symptomsTitle, symptoms, logic } from "../shared"
 
 const SymptomsTemplate = ({ lang }) => {
   const state = useContext(GlobalStateContext)
@@ -16,8 +17,8 @@ const SymptomsTemplate = ({ lang }) => {
       <SEO lang={lang} />
       <Question
         lang={lang}
-        title={shared[lang].title}
-        buttons={<ContinueButton lang={lang} linkTo={`${shared[lang].basePath}${logic.q2.cont(state)}`} />}
+        title={general[lang].title}
+        buttons={<ContinueButton lang={lang} linkTo={`${general[lang].basePath}${logic.q2.cont(state)}`} />}
       >
         <div className="ontario-form-group">
           <fieldset className="ontario-fieldset">

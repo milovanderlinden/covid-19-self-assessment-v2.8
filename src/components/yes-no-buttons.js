@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { navigate } from "@reach/router"
 import Button from "./button"
+import { general } from "../localized_content"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 
 const YesNoButtons = ({ lang, noLink, yesLink }) => {
@@ -20,8 +21,8 @@ const YesNoButtons = ({ lang, noLink, yesLink }) => {
 
   return (
     <div className="ontario-form__button-wrapper ontario-text-center">
-      <Button text={lang === "fr" ? "Non" : "No"} clickHandler={() => handleClick(noLink)} />
-      <Button text={lang === "fr" ? "Oui" : "Yes"} clickHandler={() => handleClick(yesLink, true)} />
+      <Button text={general[lang].no} clickHandler={() => handleClick(noLink)} />
+      <Button text={general[lang].yes} clickHandler={() => handleClick(yesLink, true)} />
     </div>
   )
 }

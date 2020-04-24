@@ -5,7 +5,7 @@ import { GlobalStateContext } from "../context/global-context-provider"
 import SkipToMainContent from "./skip-to-main-content"
 import Header from "./header"
 import Footer from "./footer"
-import { shared } from "../shared"
+import { general } from "../localized_content"
 import "../stylesheets/theme.css"
 import "../stylesheets/sat-style.css"
 import "../stylesheets/print.css"
@@ -15,7 +15,7 @@ const Layout = ({ lang, hideFooter, isResultsPage, children }) => {
 
   useEffect(() => {
     if (!state.in_progress) {
-      navigate(shared[lang].basePath, {
+      navigate(general[lang].basePath, {
         replace: true,
       })
     }

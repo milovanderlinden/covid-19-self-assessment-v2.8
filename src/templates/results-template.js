@@ -4,7 +4,7 @@ import { navigate } from "@reach/router"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SocialLinks from "../components/social-links"
-import { shared } from "../shared"
+import { general } from "../localized_content"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 
 import "../stylesheets/callouts.css"
@@ -24,7 +24,7 @@ const ResultsTemplate = ({ lang, resultsContent }) => {
             <div className="ontario-icon__clipboard"></div>
           </div>
           <div className="ontario-small-10 ontario-medium-11 ontario-large-10 ontario-end ontario-columns">
-            <h1>{shared[lang].resultsTitle}</h1>
+            <h1>{general[lang].resultsTitle}</h1>
             <button
               className="ontario-button--tertiary ontario-form--link backBtn"
               tabIndex="0"
@@ -35,7 +35,7 @@ const ResultsTemplate = ({ lang, resultsContent }) => {
               }}
             >
               <i className="ontario-icon ontario-icon__back-blue" aria-hidden="true"></i>
-              {` ${shared[lang].backButtonText}`}
+              {` ${general[lang].backButtonText}`}
             </button>
           </div>
         </div>

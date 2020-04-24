@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 
 import { GlobalStateContext } from "../context/global-context-provider"
-import { shared } from "../shared"
+import { general } from "../localized_content"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -16,12 +16,12 @@ const QuestionTemplate = ({ lang, yesLink, noLink, children }) => {
       <SEO lang={lang} />
       <Question
         lang={lang}
-        title={shared[lang].title}
+        title={general[lang].title}
         buttons={
           <YesNoButtons
             lang={lang}
-            yesLink={`${shared[lang].basePath}${yesLink(state)}`}
-            noLink={`${shared[lang].basePath}${noLink(state)}`}
+            yesLink={`${general[lang].basePath}${yesLink(state)}`}
+            noLink={`${general[lang].basePath}${noLink(state)}`}
           />
         }
       >

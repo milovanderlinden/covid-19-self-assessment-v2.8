@@ -1,5 +1,6 @@
 import React from "react"
 import "../stylesheets/footer.css"
+import { footer } from "../localized_content"
 
 const Footer = ({ lang }) => (
   <footer>
@@ -7,45 +8,12 @@ const Footer = ({ lang }) => (
       <div className="ontario-row ontario-row--collapse">
         <div className="ontario-small-12 ontario-columns">
           <ul className="ontario-footer__list ontario-list--inline">
-            {lang === "fr" ? (
-              <>
-                <li>
-                  <a href="https://www.ontario.ca/fr/page/lontario-en-bref">l'Ontario en bref</a>
+            {footer &&
+              footer[lang].map((item, index) => (
+                <li key={index}>
+                  <a href={item.link}>{item.text}</a>
                 </li>
-                <li>
-                  <a href="https://www.ontario.ca/fr/page/accessibilite">accessibilité</a>
-                </li>
-                <li>
-                  <a href="https://news.ontario.ca/newsroom/fr">nouvelles</a>
-                </li>
-                <li>
-                  <a href="https://www.ontario.ca/fr/page/declaration-concernant-la-protection-de-la-vie-privee">
-                    confidentialité
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.ontario.ca/fr/page/conditions-dutilisation">conditions d’utilisation</a>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <a href="https://www.ontario.ca/page/about-ontario">about Ontario</a>
-                </li>
-                <li>
-                  <a href="https://www.ontario.ca/page/accessibility">accessibility</a>
-                </li>
-                <li>
-                  <a href="http://news.ontario.ca/newsroom/en">news</a>
-                </li>
-                <li>
-                  <a href="https://www.ontario.ca/page/privacy-statement">privacy</a>
-                </li>
-                <li>
-                  <a href="https://www.ontario.ca/page/terms-use">terms of use</a>
-                </li>
-              </>
-            )}
+              ))}
           </ul>
         </div>
       </div>

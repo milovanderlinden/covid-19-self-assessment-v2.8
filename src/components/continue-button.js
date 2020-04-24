@@ -2,7 +2,8 @@ import React, { useContext } from "react"
 import { navigate } from "@reach/router"
 import Button from "./button"
 import { GlobalDispatchContext, GlobalStateContext } from "../context/global-context-provider"
-import { shared, addSymptomsToGTMDataLayer } from "../shared"
+import { general } from "../localized_content"
+import { addSymptomsToGTMDataLayer } from "../shared"
 
 const ContinueButton = ({ lang, linkTo }) => {
   const dispatch = useContext(GlobalDispatchContext)
@@ -16,7 +17,7 @@ const ContinueButton = ({ lang, linkTo }) => {
 
   return (
     <div className="ontario-form__button-wrapper ontario-text-center">
-      <Button text={shared[lang].continueButtonText} clickHandler={handleClick} />
+      <Button text={general[lang].continueButtonText} clickHandler={handleClick} />
     </div>
   )
 }

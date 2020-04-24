@@ -3,7 +3,7 @@ import { navigate } from "@reach/router"
 import "../stylesheets/forms.css"
 import "../stylesheets/question.css"
 
-import { shared } from "../shared"
+import { general } from "../localized_content"
 
 const Question = ({ lang, title, buttons, children }) => {
   return (
@@ -16,7 +16,7 @@ const Question = ({ lang, title, buttons, children }) => {
         onClick={() => navigate(-1)}
       >
         <i className="ontario-icon ontario-icon__back-blue" aria-hidden="true"></i>
-        {` ${shared[lang].backButtonText}`}
+        {` ${general[lang].backButtonText}`}
       </button>
       <div className="ontario-question-content__wrapper--inner">{children}</div>
       {buttons}

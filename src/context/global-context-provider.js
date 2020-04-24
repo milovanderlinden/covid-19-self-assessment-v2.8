@@ -1,5 +1,5 @@
 import React, { useReducer, createContext } from "react"
-import { noSymptomsId } from "../shared"
+import { noSymptomsId } from "../localized_content"
 
 export const GlobalStateContext = createContext()
 export const GlobalDispatchContext = createContext()
@@ -58,7 +58,7 @@ function calculateTotalScore(state) {
 
   return Object.values(state.q2)
     .map(val => parseFloat(val))
-    .reduce((acc, cur) => (acc += cur), 0)
+    .reduce((acc, cur) => acc + cur, 0)
 }
 
 /*
