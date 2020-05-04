@@ -23,6 +23,18 @@ const social = {
       email: "mailto:?subject=COVID-19%20autoevaluation&body=https%3A//covid-19.ontario.ca/autoevaluation",
     },
   },
+  nl: {
+    title: "Deel de zelf-test",
+    links: {
+      facebook:
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovid-19.ontario.ca%2Fself-assessment&amp;src=sdkpreparse",
+      twitter:
+        "https://twitter.com/intent/tweet?text=Ontario%20COVID-19%20Self-Assessment%20Tool%3A%20https%3A//covid-19.ontario.ca/self-assessment",
+      linkedin:
+        "https://www.linkedin.com/shareArticle?mini=true&url=https%3A//covid-19.ontario.ca/self-assessment&title=&summary=&source=",
+      email: "mailto:?subject=COVID-19%20Self%20Assessment&body=https%3A//covid-19.ontario.ca/self-assessment",
+    },
+  },
 }
 
 export default social

@@ -28,6 +28,16 @@ function SEO({ lang, meta = {} }) {
               og_image
               og_locale
             }
+            nl {
+              title
+              description
+              author
+              twitter_site
+              og_url
+              og_title
+              og_image
+              og_locale
+            }
           }
         }
       }

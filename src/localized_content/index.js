@@ -24,6 +24,17 @@ const general = {
     yes: "Oui",
     no: "Non",
   },
+  nl: {
+    lang: "Nederlands",
+    lang_abbr: "NL",
+    basePath: "/zelf-test/",
+    title: "COVID-19 zelf-test",
+    resultsTitle: "COVID-19 zelf-test resultaten",
+    backButtonText: "Terug naar de vorige pagina",
+    continueButtonText: "Verder",
+    yes: "Ja",
+    no: "Nee",
+  },
 }
 
 export { general, social, footer }

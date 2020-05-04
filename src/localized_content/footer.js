@@ -16,6 +16,13 @@ const footer = {
     { link: "https://www.ontario.ca/page/privacy-statement", text: "privacy" },
     { link: "https://www.ontario.ca/page/terms-use", text: "terms of use" },
   ],
+  nl: [
+    { link: "https://www.ontario.ca/page/about-ontario", text: "Over de zelf-test" },
+    { link: "https://www.ontario.ca/page/accessibility", text: "toegankelijkheid" },
+    { link: "http://news.ontario.ca/newsroom/en", text: "nieuws" },
+    { link: "https://www.ontario.ca/page/privacy-statement", text: "privacy" },
+    { link: "https://www.ontario.ca/page/terms-use", text: "gebruiksvoorwaarden" },
+  ],
 }
 
 export default footer

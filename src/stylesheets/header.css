@@ -44,8 +44,10 @@
 
 .ontario-main-header__link a,
 .ontario-main-header__link a:visited {
+  text-transform: lowercase;
   color: white;
   text-decoration: none;
+  padding: 1em;
 }
 
 .ontario-main-header__link a:hover,

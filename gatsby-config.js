@@ -20,6 +20,16 @@ module.exports = {
       og_image: `https://covid-19.ontario.ca/covid-19-sat-assets/social_image_fr.png`,
       og_locale: `fr_CA`,
     },
+    nl: {
+      title: `Coronavirus (COVID-19) zelf-test`,
+      description: `Take this self-assessment if you think you have coronavirus (COVID-19) or have been in close contact with someone who has it.`,
+      author: `@ONThealth`,
+      twitter_site: `@ONThealth`,
+      og_url: `https://covid-19.ontario.ca/zelf-test`,
+      og_title: `COVID-19 zelf-test`,
+      og_image: `https://covid-19.ontario.ca/covid-19-sat-assets/social_image_en.png`,
+      og_locale: `nl_NL`,
+    },
   },
   assetPrefix: "covid-19-sat-assets",
   plugins: [

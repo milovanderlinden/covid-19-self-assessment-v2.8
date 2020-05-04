@@ -6,7 +6,12 @@ import logo from "../images/ontario-logo.png"
 import printLogo from "../images/ontario@2x-print.png"
 
 const Header = ({ lang }) => {
-  const altLang = lang === "fr" ? "en" : "fr"
+  const langs = ["nl", "en", "fr"]
+  const altLangs = langs.filter(function(item){
+    return item !== lang
+  })
+
+  console.log(altLangs)
   return (
     <header className="ontario-main-header">
       <div className="ontario-row">
@@ -25,12 +30,16 @@ const Header = ({ lang }) => {
           />
         </div>
         <div className="ontario-small-7 ontario-columns ontario-text-right ontario-main-header__link">
-          <a href={general[altLang].basePath} className="ontario-hide-for-small-only">
-            {general[altLang].lang}
-          </a>
-          <a href={general[altLang].basePath} className="ontario-show-for-small-only">
-            {general[altLang].lang_abbr}
-          </a>
+          {altLangs.map(altLang => 
+            <span>
+              <a href={general[altLang].basePath} className="ontario-hide-for-small-only">
+                {general[altLang].lang}
+              </a>
+              <a href={general[altLang].basePath} className="ontario-show-for-small-only">
+                {general[altLang].lang_abbr}
+              </a>
+            </span>
+          )}
         </div>
       </div>
     </header>
